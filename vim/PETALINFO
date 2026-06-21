@@ -1,5 +1,5 @@
 name=vim
 version=1.36.1
-description=Text editor (busybox vi)
+description=Vi text editor (busybox)
 size=1.3M
 depends=
