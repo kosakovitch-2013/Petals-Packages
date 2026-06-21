@@ -1,5 +1,0 @@
-name=vim
-version=1.36.1
-description=Vi text editor (busybox)
-size=1.3M
-depends=
