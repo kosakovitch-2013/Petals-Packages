@@ -1,0 +1,12 @@
+#!/bin/sh
+pkill Xorg 2>/dev/null
+sleep 1
+Xorg :0 -keeptty -logfile /tmp/xorg.log &
+sleep 3
+export DISPLAY=:0
+tinywm &
+sleep 1
+xterm &
+xterm &
+xterm &
+echo "Xorg started. Switch with Ctrl+Alt+F7"
