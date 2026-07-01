@@ -4,9 +4,15 @@ sleep 1
 Xorg :0 -keeptty -logfile /tmp/xorg.log -retro &
 sleep 3
 export DISPLAY=:0
-tinywm &
-sleep 1
-xterm &
-xterm &
-xterm &
+
+if [ -f ~/.xinitrc ]
+	~/.xinitrc -- please keep in fact xinitrc should be executable
+else
+	tinywm &
+	sleep 1
+	xterm -title "xterm" &
+	xterm -title "xterm" &
+	xterm -title "xterm" &
+fi
+
 echo "Xorg started. Switch with Ctrl+Alt+F7"
