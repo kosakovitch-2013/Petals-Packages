@@ -5,7 +5,7 @@ Xorg :0 -keeptty -logfile /tmp/xorg.log -retro &
 sleep 3
 export DISPLAY=:0
 
-if [ -f ~/.xinitrc ]
+if [ -f ~/.xinitrc ]; then
 	~/.xinitrc -- please keep in fact xinitrc should be executable
 else
 	tinywm &
